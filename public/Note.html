@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My note</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function getNote(){
+			if(localStorage.getItem('note')){
+				var note=localStorage.getItem('note');
+			}else{
+				var note='Enter a note';
+			}
+			document.getElementById('note').innerHTML=note;
+		}
+		function saveNote(id){
+			var note=document.getElementById('note').innerHTML;
+			localStorage.setItem('note',note);
+		}
+		function clearnote(){
+			clear: localStorage.clear();
+
+		}
+	</script>
+	<style type="text/css">
+		body{
+			line-height: 1.6em;
+		}
+	</style>
+</head>
+<body>
+	<h1>My Note</h1>
+	<section id="container">
+		<div id="note" contenteditable="true" onkeyup="saveNote(this.id)"></div>
+	</section>
+	<footer id="foot">
+		<button id="butt"><a href="" onclick="javascript:clearnote();" class="clear">Clear Note</a></button>
+		<p>My note &copy; 2018</p>
+	</footer>
+	<script type="text/javascript">
+		getNote();
+	</script>
+</body>
+</html>

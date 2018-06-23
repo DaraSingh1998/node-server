@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple File</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="cont">
+			<div id="header">
+				{{> header}}
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a class="active" href="simple.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="drag.html">Drag Page</a></li>
+					<li><a href="Note.html">Note</a></li>
+				</ul>
+			</div>
+			<video src="C:\VIBHOR\MOVIES\GOD OF WAR.mp4" controls type="video/mp4">
+				Yor browser cannot play this...	
+			</video>
+			<div id="main">
+				<h2>Welcome</h2>
+				<p>
+					{{message}}
+				</p>
+			</div>
+			<div id="side">
+				<h3>Side</h3>
+				<p>
+					Sed ut leo at libero pulvinar vestibulum quis eget ligula. Nam tempus diam turpis, dignissim congue mauris placerat a. Ut a dapibus ipsum. Proin ante elit, lacinia a quam sed, porta scelerisque quam. In aliquam varius dictum.
+				</p>
+			</div>
+			<div class="clear"></div>
+			<div id="foot">
+				{{> footer }}
+			</div>
+		</div>
+	</body>
+</html>

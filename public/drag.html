@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drag api</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		a:hover{
+			color: #000;
+		}
+		#mylist li:nth-child(even)
+		{
+			color: orange;
+		}
+	</style>
+	<script>
+		function allowDrop(ev){
+			ev.preventDefault();
+		}
+		function drag(ev){
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+		function drop(ev){
+			ev.preventDefault();
+			var data=ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+</head>
+<body>
+	
+	<div id="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+		
+	</div>
+	<img id="drag1" src="C:\VIBHOR\Sessions\index\add.jpg" draggable="true" ondragstart="drag(event)" width="323" height="156">
+	<br>
+	<a href="#">Click Me</a>
+	<br>
+	<ol id="mylist">
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+	</ol>
+</body>
+</html>

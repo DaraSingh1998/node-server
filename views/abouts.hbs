@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple {{pageTitle}}</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="cont">
+			<div id="header">
+				{{> header}}
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a href="simple.html">Home</a></li>
+					<li><a class="active" href="about.html">About</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<div id="main">
+				<h2>About</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel euismod lectus, quis faucibus orci. Mauris volutpat tincidunt ligula vel pulvinar. Donec quis dolor vel erat tempus tempus non et nunc. Etiam vitae lorem sit amet mi varius tincidunt ac a ligula. Vivamus vitae dolor auctor orci facilisis rhoncus pulvinar quis erat. Quisque eu varius ante. Nullam quis lobortis est. Sed posuere velit vel dui placerat, nec bibendum erat sagittis.
+				</p>
+			</div>
+			<div id="side">
+				<h3>Side</h3>
+				<p>
+					Sed ut leo at libero pulvinar vestibulum quis eget ligula. Nam tempus diam turpis, dignissim congue mauris placerat a. Ut a dapibus ipsum. Proin ante elit, lacinia a quam sed, porta scelerisque quam. In aliquam varius dictum.
+				</p>
+			</div>
+			<div class="clear"></div>
+			<div id="foot">
+				{{> footer}}
+			</div>
+		</div>
+	</body>
+</html>
