@@ -38,7 +38,11 @@ app.get('/abouts',(req,res)=>{
 		header:'About',
 	});
 });
-
+app.get('/port',(req,res)=>{
+	res.render('port.hbs',{
+		header:"Portfolio",
+	});
+});
 app.get('/bad',(req,res)=>{
 	res.send({
 		error:'Unable to connect'
